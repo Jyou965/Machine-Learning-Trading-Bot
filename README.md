@@ -82,7 +82,7 @@ Based on model 2, by increasing the SMA_Fast window to 200 datapoints (approx. 5
 
 ![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/png/model_3_report.png)
 
-Surprisingly, model 3 underperformed cummulative actual return by 102.27% due to increasing the windows of SMA indicators!  
+Surprisingly, model 3 generated almost perfect negative correlation between strategy returns and actual returns.  The cummulative strategy returns underperformed cummulative actual return by 102.27% due to increasing the windows of SMA indicators!  
 
 ### Model 4:
 
