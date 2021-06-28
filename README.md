@@ -65,19 +65,16 @@ By changing the training data scope from three months to 24 months while keeping
 
 ![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/model_2_report.png)
 
-The outperformance of the cummulative strategy over cummulative actual return widened to 17.86%.
+The outperformance of the cummulative strategy over cummulative actual return widened to 17.86%.  Model predictive effectiveness improved over model 1. 
 
 
-Such improvement in model 2 performance was due to increasing the training data range from 3 months to 24 months.
+Such improvements in model 2 performance were due to increasing the training data range from 3 months to 24 months.
 
-Based on model 2, by increasing the SMA_Fast window to 200 datapoints (approx. 50 days) and increasing the SMA_Slow window to 800 datapoints (approx. 200 days), we generated model 3, with the following results:
+Based on model 2, by increasing the SMA_Fast window to 200 datapoints (approx. 50 days) and increasing the SMA_Slow window to 800 datapoints (approx. 200 days), we generated model 3, which generated the following results:
 
 ![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/svm3.png)
 
 ![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/model_3_report.png)
-
-The outperformance of the cummulative strategy over cummulative actual return widened to 17.86%.
-
 
 Surprisingly, model 3 underperformed cummulative actual return by 102.27% due to increasing the windows of SMA indicators!  
 
@@ -94,6 +91,8 @@ The conclusion is that
 1. Decision Tree model is ill-suited for linear data as stock returns.  SVM model is a better fit.
 2. Longer training period of 24 months benefited the model performance.
 3. Windows for SMA indicators are best kept relatively short.
+
+Model 2 is the best approach.
 
 ---
 
