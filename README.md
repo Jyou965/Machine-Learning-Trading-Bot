@@ -26,7 +26,7 @@ This application leverages python 3.7 with the following packages:
 
 * [sklearn.metrics](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics) - includes score functions, performance metrics and pairwise metrics and distance computations.
 
-*[sklearn.tree](https://scikit-learn.org/stable/modules/tree.html) - Decision Trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features. A tree can be seen as a piecewise constant approximation.
+* [sklearn.tree](https://scikit-learn.org/stable/modules/tree.html) - Decision Trees (DTs) are a non-parametric supervised learning method used for classification and regression. The goal is to create a model that predicts the value of a target variable by learning simple decision rules inferred from the data features. A tree can be seen as a piecewise constant approximation.
 
 ---
 
@@ -51,7 +51,7 @@ By using this application, an investment professional can find the best-fitting 
 The chart below shows that the baseline strategy (model 1) return outperforms actual returns by evaluating cummulative returns over the six years.  The cummulative strategy return outperformed cummulative actual return by 13.06%.
 
 ![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/svm.png)
-![Plot]()
+![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/model_1_report.png)
 
 This strategy is generated with the following parameters:
 - the SVC classifier model from SKLearn's support vector machine (SVM) learning method;
@@ -59,24 +59,24 @@ This strategy is generated with the following parameters:
 - with SMA_Fast indicator being the simple moving average of 4 data points and SMA_Slow indicator being the simple moving average of 100 data points.
 
 By changing the training data scope from three months to 24 months while keeping all else equal (model 2), the predictive results improved to the following:
-![Plot]()
+![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/model_2_report.png)
 The outperformance of the cummulative strategy over cummulative actual return widened to 17.86%.
-![Plot]()
+![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/svm2.png)
 
 Such improvement in model 2 performance was due to increasing the training data range from 3 months to 24 months.
 
 Based on model 2, by increasing the SMA_Fast window to 200 datapoints (approx. 50 days) and increasing the SMA_Slow window to 800 datapoints (approx. 200 days), we generated model 3, with the following results:
-![Plot]()
+![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/model_3_report.png)
 The outperformance of the cummulative strategy over cummulative actual return widened to 17.86%.
-![Plot]()
+![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/svm3.png)
 
 Surprisingly, model 3 underperformed cummulative actual return by 102.27% due to increasing the windows of SMA indicators!  
 
 Finally, we establish model 4 by using the Decision Tree model, keeping the windows of SMA_Fast and SMA_Slow at 4 and 100 respectively, using 24 months as training period.  The model performance is demonstrated in the following charts.  
-![Plot]()
+![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/decision_tree_report.png)
 
 Model 4 under-performed cummulative actual return by 70%!
-![Plot]()
+![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/decision_tree.png)
 
 The conclusion is that 
 1. Decision Tree model is ill-suited for linear data as stock returns.  SVM model is a better fit.
