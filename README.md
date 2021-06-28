@@ -48,7 +48,9 @@ By using this application, an investment professional can find the best-fitting 
 
 ## Evaluation Report
 
-The chart below shows that the baseline strategy (model 1) return outperforms actual returns by evaluating cummulative returns over the six years.  The cummulative strategy return outperformed cummulative actual return by 13.06%.
+### Model 1:
+
+The chart below shows that the baseline strategy return outperforms actual returns by evaluating cummulative returns over the six years.  The cummulative strategy return outperformed cummulative actual return by 13.06%.
 
 ![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/svm.png)
 
@@ -59,7 +61,9 @@ This strategy is generated with the following parameters:
 - using three months of data as training data and the remaining 69 months' data;
 - with SMA_Fast indicator being the simple moving average of 4 data points and SMA_Slow indicator being the simple moving average of 100 data points.
 
-By changing the training data scope from three months to 24 months while keeping all else equal (model 2), the predictive results improved to the following:
+### Model 2:
+
+By changing the training data scope from three months to 24 months while keeping all else equal, the predictive results improved to the following:
 
 ![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/svm2.png)
 
@@ -70,6 +74,8 @@ The outperformance of the cummulative strategy over cummulative actual return wi
 
 Such improvements in model 2 performance were due to increasing the training data range from 3 months to 24 months.
 
+### Model 3:
+
 Based on model 2, by increasing the SMA_Fast window to 200 datapoints (approx. 50 days) and increasing the SMA_Slow window to 800 datapoints (approx. 200 days), we generated model 3, which generated the following results:
 
 ![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/svm3.png)
@@ -77,6 +83,8 @@ Based on model 2, by increasing the SMA_Fast window to 200 datapoints (approx. 5
 ![Plot](https://github.com/Jyou965/Machine-Learning-Trading-Bot/blob/main/model_3_report.png)
 
 Surprisingly, model 3 underperformed cummulative actual return by 102.27% due to increasing the windows of SMA indicators!  
+
+### Model 4:
 
 Finally, we establish model 4 by using the Decision Tree model, keeping the windows of SMA_Fast and SMA_Slow at 4 and 100 respectively, using 24 months as training period.  The model performance is demonstrated in the following charts.  
 
