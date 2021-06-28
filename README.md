@@ -94,6 +94,7 @@ Finally, we establish model 4 by using the Decision Tree model, keeping the wind
 
 Model 4 under-performed cummulative actual return by 70%!
 
+### Conclusion:
 
 The conclusion is that 
 1. Decision Tree model is ill-suited for linear data as stock returns.  SVM model is a better fit.
